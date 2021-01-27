@@ -1,0 +1,21 @@
+.map {
+  height: 300px;
+  border-bottom: 1px solid blue;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.map-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .map {
+    height: 150px;
+    margin-bottom: 10px;
+  }
+}

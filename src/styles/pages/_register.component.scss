@@ -1,0 +1,34 @@
+.register {
+  height: calc(100vh - 64px);
+  @extend .flex-column-center;
+  @extend .flex-column-middle;
+}
+
+.register__form {
+  height: 90%;
+  background-color: wheat;
+  animation: animateForm 300ms forwards;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .register {
+    height: auto;
+    padding: 10px;
+  }
+  .register__form {
+    height: 100%;
+  }
+
+}
+
+
+
+@keyframes animateForm {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

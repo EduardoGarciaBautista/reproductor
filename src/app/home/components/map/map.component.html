@@ -1,0 +1,7 @@
+<div class="map">
+    <google-map [options]="options" *ngIf="apiLoaded">
+        <map-marker *ngFor="let markerPosition of markerPositions"
+                    [position]="markerPosition"
+                    [options]="markerOptions"></map-marker>
+    </google-map>
+</div>

@@ -1,0 +1,94 @@
+.home {
+  @extend .flex-column;
+}
+
+.home__message {
+  text-align: center;
+  @extend .flex-column;
+  justify-content: center;
+  padding: 20px;
+  height: 200px;
+  width: 90%;
+  border-radius: 10px;
+  align-self: center;
+  margin-top: 30px;
+  background-color: $car-bg-color;
+  animation: fadeInDown 300ms forwards;
+
+  h1 {
+    font-size: 40px;
+    cursor: pointer;
+    transition: 300ms;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  p {
+    font-size: 20px;
+    color: wheat;
+  }
+}
+
+.home__message--button {
+  width: 200px;
+  height: 70px;
+  font-size: 20px;
+  align-self: center;
+  justify-self: center;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 300ms;
+  border: 0;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .home__message {
+    height: 100px;
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      color: wheat;
+    }
+  }
+  .home__message--button {
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .home__message {
+    height: auto;
+    padding: 5px;
+    h1 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      color: wheat;
+    }
+  }
+}
+
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(70px);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
+

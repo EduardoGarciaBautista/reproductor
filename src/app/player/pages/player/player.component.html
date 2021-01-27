@@ -1,0 +1,9 @@
+<div class="player" [class.center-loading]="isLoading">
+    <mat-spinner color="accent" *ngIf="isLoading"></mat-spinner>
+    <div class="player__playlist" [class.loading]="isLoading" *ngIf="!isLoading">
+        <app-play-list></app-play-list>
+    </div>
+    <div class="player__player" *ngIf="!isLoading">
+        <app-music-player></app-music-player>
+    </div>
+</div>

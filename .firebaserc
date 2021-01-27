@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "register-1753e"
+  },
+  "targets": {
+    "register-1753e": {
+      "hosting": {
+        "player": [
+          "register-1753e"
+        ]
+      }
+    }
+  }
+}

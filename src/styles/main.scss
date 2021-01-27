@@ -1,0 +1,20 @@
+@import "utils/variables";
+@import "base/reset";
+
+@import "vendors/material";
+@import "utils/mixins";
+@import "layout/grid";
+
+@import "pages/home.component";
+@import "pages/player.component";
+@import "pages/register.component";
+
+@import "components/register-form.component";
+@import "components/register-form.component";
+@import "components/play-list.component";
+@import "components/list-item.component";
+@import "components/map.component";
+@import "components/music-player.component";
+
+@import "layout/header.component";
+@import "layout/layout.component";

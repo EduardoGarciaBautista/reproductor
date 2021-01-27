@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+    <div [class.menu__mobile]="menuIsOpen">
+        <button mat-button aria-label="principal icon menu" class="mobile__button" (click)="menuIsOpen = !menuIsOpen">
+            <mat-icon *ngIf="!menuIsOpen">menu</mat-icon>
+            <mat-icon *ngIf="menuIsOpen">cancel</mat-icon>
+        </button>
+        <span class="title">Mi reproductor de música</span>
+
+        <button class="header__button" mat-button aria-label="Home menu icon" routerLink="/home"
+                routerLinkActive="active" (click)="changeMenuState()">
+            Inicio
+            <mat-icon>home</mat-icon>
+        </button>
+
+        <button mat-button class="header__button" aria-label="Example icon-button with menu icon" routerLink="/player"
+                routerLinkActive="active" (click)="changeMenuState()">
+            Reproductor
+            <mat-icon>play_circle_outline</mat-icon>
+        </button>
+
+        <button mat-button class="header__button" aria-label="Example icon-button with menu icon" routerLink="/register"
+                routerLinkActive="active" (click)="changeMenuState()">
+            Registrarse
+            <mat-icon>supervised_user_circle</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>

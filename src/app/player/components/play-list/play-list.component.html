@@ -1,0 +1,12 @@
+<div class="play-list">
+    <div class="play-list__header">
+        <span class="play-list__header--title">
+            Tu lista de canciones
+        </span>
+    </div>
+
+    <div class="play-list__content">
+        <app-list-item *ngFor="let song of playList" [song]="song"></app-list-item>
+    </div>
+
+</div>

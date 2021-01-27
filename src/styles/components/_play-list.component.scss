@@ -1,0 +1,28 @@
+.play-list {
+  width: 100%;
+  height: 100%;
+}
+
+.play-list__header {
+  height: 50px;
+  @extend .flex-row-center;
+  @extend .flex-row-middle;
+  position: relative;
+
+}
+
+
+.play-list__header--title {
+  font-size: 20px;
+}
+
+.play-list__content {
+  padding: 10px;
+  overflow: hidden;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-rows: auto;
+  gap:  5px 10px;
+  height: calc(100% - 70px);
+}

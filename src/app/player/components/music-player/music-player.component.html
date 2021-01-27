@@ -1,0 +1,24 @@
+<div class="music-player ">
+    <div class="music-player__artist">
+        <img class="music-player__artist--image" [src]="activeSong.images.background || defaultImage" alt="">
+    </div>
+    <div class="music-player__status mat-elevation-z8">
+        <audio [src]="audioSrc" #audioElement autoplay (ended)="nextCircular()">
+        </audio>
+        <div class="player-actions">
+            <mat-icon class="player-actions__previous" (click)="preview()">skip_previous</mat-icon>
+            <mat-icon class="player-actions__play" *ngIf="!isPlaying" (click)="play()">play_circle_filled</mat-icon>
+            <mat-icon class="player-actions__pause" *ngIf="isPlaying" (click)="pause()">pause_circle_filled</mat-icon>
+            <mat-icon class="player-actions__next" (click)="next()">skip_next</mat-icon>
+        </div>
+        <div class="player-song__info">
+            <span class="player-song__info--title">
+                Tocando: <b>{{activeSong.title}}</b>
+            </span>
+        </div>
+
+        <mat-progress-bar class="player-timer" mode="buffer" *ngIf="isPlaying"></mat-progress-bar>
+        <mat-progress-bar class="player-timer" mode="determinate" *ngIf="!isPlaying" value="0"></mat-progress-bar>
+
+    </div>
+</div>

@@ -1,0 +1,63 @@
+.player {
+  max-width: 100vw;
+  height: calc(100vh - 64px);
+  @extend .flex-row;
+  box-sizing: border-box;
+  justify-content: center;
+
+}
+.center-loading {
+  align-items: center;
+}
+
+.player__playlist {
+  width: 70%;
+}
+
+.loading {
+  @extend .flex-column-center;
+  @extend .flex-column-middle;
+}
+
+.player__player {
+  width: 30%;
+  padding: 45px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+
+/* pantallas grandes */
+@media (max-width: 1200px) {
+  .player__player {
+    padding: 20px;
+  }
+  .player__player {
+    width: 35%;
+  }
+  .player__playlist {
+    width: 65%;
+  }
+}
+
+/* escritorio normales */
+@media (max-width: 992px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .player__player {
+    width: 50%;
+  }
+  .player__playlist {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .player__player {
+    width: 100%;
+  }
+  .player__playlist {
+    display: none;
+  }
+}

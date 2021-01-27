@@ -1,0 +1,39 @@
+.register-form {
+  width: 100%;
+
+  form {
+    padding: 30px;
+  }
+
+}
+
+.register-form__fields {
+  @extend .flex-row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.register-form__fields--field {
+  width: 100%;
+  min-width: 200px;
+
+}
+
+.register-form__actions {
+  @extend .flex-row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .register-form {
+    width: 100%;
+
+    form {
+      padding: 15px;
+    }
+
+  }
+}

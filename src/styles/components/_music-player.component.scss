@@ -1,0 +1,116 @@
+.music-player {
+  width: 100%;
+  height: 100%;
+  background-color: $music-player-color;
+  border-radius: 30px;
+}
+
+.music-player__artist {
+  height: 40%;
+  @extend .flex-row-center;
+  @extend .flex-row-middle;
+}
+
+
+.music-player__artist--image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.music-player__status {
+  height: 60%;
+  border-top-left-radius: 20%;
+  background-color: $music-player-status-b;
+  position: relative;
+  overflow: hidden;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.music-player__actions {
+  height: 70px;
+  width: 100%;
+  background-color: $music-player-actions-color;
+  position: absolute;
+  bottom: 0;
+  @extend .flex-column;
+
+}
+
+
+.player-actions {
+  width: 150px;
+  height: 150px;
+  background-color: azure;
+  border-radius: 50%;
+  @extend .flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-song__info {
+  @extend .flex-row-center;
+}
+
+.player-song__info--title {
+  font-size: 18px;
+  padding: 0 20px;
+}
+
+.player-timer {
+  height: 6px;
+}
+
+.player-actions__previous, .player-actions__play, .player-actions__next, .player-actions__pause {
+  font-size: 40px;
+  height: 40px !important;
+  width: 40px !important;
+  cursor: pointer;
+  transition: 300ms;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.player-actions__play, .player-actions__pause {
+  margin: 0 10px;
+
+}
+
+
+/* escritorio normales */
+@media (max-width: 992px) {
+  .music-player__artist--image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 640px) {
+  .player-actions {
+    width: 120px;
+    height: 120px;
+  }
+  .player-actions__play, .player-actions__pause {
+    margin: 0 5px;
+  }
+}
+
+@keyframes animateImage {
+  from {
+    transform: translateY(-40px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+

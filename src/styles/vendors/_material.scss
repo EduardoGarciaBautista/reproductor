@@ -1,0 +1,70 @@
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$mat-gray: (50: #f4faff,
+        100: #eef4fe,
+        200: #e5ebf5,
+        300: #d6dce6,
+        400: #b3b9c2,
+        500: #9399a2,
+        600: #6b7079,
+        700: #585d65,
+        800: #393e46,
+        900: #191d25,
+        A100: #d4d6d6,
+        A200: #b3bcbd,
+        A400: #798e90,
+        A700: #47585a,
+        contrast: (50: $black-87-opacity,
+                100: $black-87-opacity,
+                200: $black-87-opacity,
+                300: $black-87-opacity,
+                400: $black-87-opacity,
+                500: white,
+                600: white,
+                700: white,
+                800: $white-87-opacity,
+                900: $white-87-opacity,
+                A100: $black-87-opacity,
+                A200: white,
+                A400: white,
+                A700: white,
+        ));
+
+$mat-orange: (50: #fffde6,
+        100: #fff9c2,
+        200: #fff59a,
+        300: #fff070,
+        400: #fdeb4e,
+        500: #fbe628,
+        600: #ffd92a,
+        700: #fec022,
+        800: #fda819,
+        900: #fa7d09,
+        A100: #d4d6d6,
+        A200: #b3bcbd,
+        A400: #798e90,
+        A700: #47585a,
+        contrast: (50: $black-87-opacity,
+                100: $black-87-opacity,
+                200: $black-87-opacity,
+                300: $black-87-opacity,
+                400: $black-87-opacity,
+                500: white,
+                600: white,
+                700: white,
+                800: $white-87-opacity,
+                900: $white-87-opacity,
+                A100: $black-87-opacity,
+                A200: white,
+                A400: white,
+                A700: white,
+        ));
+
+$my-app-primary: mat-palette($mat-gray, 800);
+$my-app-accent: mat-palette($mat-orange, 900);
+$my-app-warn: mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
